@@ -2,8 +2,9 @@ const productService = require("../bl/productService");
 
 //get all product
 const getProduct = (req, res) => {
-    const products = productService.getProduct();
-    res.send(products);
+    productService.getProduct()
+    .then(products => 
+    res.send(products));
 };
 
 //get product by id

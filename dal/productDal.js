@@ -1,9 +1,9 @@
-const products = require("../data.json");
 const jsonfile = require("jsonfile");
 
 
 const getData = (req, res) => {
-    return products.products
+    const data = jsonfile.readFile("./data.json")
+            return data
 };
 
 const createProduct = (newProduct) => {
