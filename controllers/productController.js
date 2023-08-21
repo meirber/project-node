@@ -19,4 +19,10 @@ const createProduct = (req, res) => {
     productService.createProduct(nowProduct);
     res.send("The product has been successfully added ")
 }
-module.exports = { getProduct, getProductBiId, createProduct }
+
+const updatePproduct = (req, res) => {
+    productService.updatePproduct(req, req.params.id)
+    res.send("The product has been updated successfully")
+}
+
+module.exports = { getProduct, getProductBiId, createProduct, updatePproduct }

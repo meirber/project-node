@@ -15,4 +15,6 @@ const createProduct = (newProduct) => {
      productsDal.createProduct(newProduct)
 }
 
+const updatePproduct = (req, id)
+
 module.exports = { getProduct, getProductBiId, createProduct}

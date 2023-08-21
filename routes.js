@@ -11,5 +11,7 @@ router.get('/:id', productController.getProductBiId);
 //create product
 router.post('/create-product',productController.createProduct);
 
+//Update a product
+router.put('/update-product/:id', productController.updatePproduct)
 
 module.exports = router;
