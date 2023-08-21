@@ -15,6 +15,16 @@ const createProduct = (newProduct) => {
      productsDal.createProduct(newProduct)
 }
 
-const updatePproduct = (req, id)
+const updatePproduct = (product, id) => {
+    productsDal.updatePproduct(product, id);
+}
 
-module.exports = { getProduct, getProductBiId, createProduct}
+const deleteProduct = (id) => {
+    productsDal.deleteProduct(id);
+}
+
+const changingQuantity = (id, action) => {
+    productsDal.changingQuantity(id, action)
+}
+
+module.exports = { getProduct, getProductBiId, createProduct, updatePproduct, deleteProduct, changingQuantity}

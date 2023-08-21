@@ -11,7 +11,13 @@ router.get('/:id', productController.getProductBiId);
 //create product
 router.post('/create-product',productController.createProduct);
 
-//Update a product
-router.put('/update-product/:id', productController.updatePproduct)
+//Update product
+router.put('/update-product/:id', productController.updatePproduct);
+
+//delete product
+router.delete('/delete-product/:id', productController.deleteProduct);
+
+//Changing the product quantity
+router.put('/changing-quantity/:id/:action',productController.changingQuantity);
 
 module.exports = router;
