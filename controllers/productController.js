@@ -8,8 +8,8 @@ const getProduct = (req, res) => {
 };
 
 //get product by id
-const getProductBiId = (req, res) => {
-    const product = productService.getProductBiId(req, res, req.params.id);
+const getProductBiId = async (req, res) => {
+    const product = await productService.getProductBiId(req.params.id);
     res.send(product);
 }
 

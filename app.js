@@ -1,7 +1,7 @@
-const express = require('express')
-const app = express()
-const router = require('./routes.js')
-const morgan = require('morgan')
+const express = require('express');
+const app = express();
+const router = require('./routes.js');
+const morgan = require('morgan');
 const port = 3000
 
 app.use(express.json())

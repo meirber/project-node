@@ -1,7 +1,13 @@
 const jsonfile = require("jsonfile");
+const axios = require('axios');
 
+// const createData = () => {
+//     axios.get('https://fakestoreapi.com/products')
+//     .then(data => console.log(data))
+// }
+// createData()
 
-const getData = (req, res) => {
+const getData = () => {
     const data = jsonfile.readFile("./data.json")
     return data
 };
