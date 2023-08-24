@@ -1,11 +1,10 @@
 const jsonfile = require("jsonfile");
 const axios = require('axios');
 
-// const createData = () => {
-//     axios.get('https://fakestoreapi.com/products')
-//     .then(data => console.log(data))
-// }
-// createData()
+const createData = () => {
+    axios.get('https://fakestoreapi.com/products')
+    .then(data => console.log(data.data))
+}
 
 const getData = () => {
     const data = jsonfile.readFile("./data.json")
@@ -55,4 +54,4 @@ const changingQuantity = (id, action) => {
         })
 }
 
-module.exports = { getData, createProduct, updatePproduct, deleteProduct, changingQuantity };
+module.exports = { getData, createProduct, updatePproduct, deleteProduct, changingQuantity, createData };

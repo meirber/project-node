@@ -9,8 +9,13 @@ const getProduct = (req, res) => {
 
 //get product by id
 const getProductBiId = async (req, res) => {
-    const product = await productService.getProductBiId(req.params.id);
-    res.send(product);
+    try {
+        const product = await productService.getProductBiId(req.params.id);
+        res.send(product);
+    }
+    catch (err) {
+        res.send(err)
+    }
 }
 
 //create product

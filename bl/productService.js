@@ -1,14 +1,5 @@
 const productsDal = require("../dal/productDal.js");
 
-
-function idCheck(id) {
-    const data = getProduct()
-        .then(data => {
-            console.log(data)
-            return data.some(id)
-        })
-}
-
 const getProduct = () => {
     const products = productsDal.getData();
     return products;
@@ -16,7 +7,12 @@ const getProduct = () => {
 
 const getProductBiId = async (id) => {
     const data = await productsDal.getData();
-    return data.filter(product => product.id == id); 
+    const filteredProducts = data.filter(product => product.id == id);
+    if (filteredProducts.length > 0) {
+        return filteredProducts;
+    } else {
+        throw new Error("מוצר לא נמצא");
+    }
 };
 
 const createProduct = (newProduct) => {
